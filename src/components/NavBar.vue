@@ -1,14 +1,18 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
+    <ul>
+      <li v-for="(item, index) in navItems" :key="index">{{ item }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
+  name: "NavBar",
+  data() {
+    return {
+      navItems: ["Home", "About", "Projects", "Contact", "Resume"]
+    };
   }
 };
 </script>
